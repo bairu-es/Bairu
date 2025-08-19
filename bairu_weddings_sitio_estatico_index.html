@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bairu Weddings – Webs de boda personalizadas</title>
+  <meta name="description" content="Diseño profesional de webs de boda personalizadas. Sorprende a tus invitados con una web única para vuestro gran día. Nos encargamos de todo: diseño, textos, fotos y estilo." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf8f6;
+      --paper:#ffffff;
+      --ink:#1f2937; /* gris oscuro */
+      --muted:#6b7280; /* gris medio */
+      --brand:#9a6f5a; /* marrón rosado elegante */
+      --brand-2:#c7b4a6; /* tono suave para detalles */
+      --ring: rgba(154,111,90,.35);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.07);
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;display:block;border-radius:var(--radius)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(180%) blur(8px);
+      background:rgba(250,248,246,.7);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.4px}
+    .brand .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .nav a{font-weight:500;color:var(--ink)}
+    .btn{display:inline-block;padding:12px 18px;border-radius:999px;border:1px solid var(--brand);color:#fff;background:var(--brand);box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;color:var(--brand)}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate}
+    .hero .media{position:absolute;inset:0;z-index:-1;overflow:hidden}
+    .hero .media img{width:100%;height:100%;object-fit:cover;border-radius:0;filter:brightness(.75)}
+    .hero .scrim{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.45))}
+    .hero .inner{padding:120px 0 80px;color:#fff;text-align:center}
+    .hero h1{font-family: "Playfair Display", Georgia, serif;font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1.1;margin:0 0 12px}
+    .hero p{max-width:760px;margin:0 auto 26px;color:#f3f4f6;font-size:18px}
+
+    /* Sections */
+    section{padding:72px 0}
+    .grid{display:grid;gap:24px}
+    .grid-2{grid-template-columns:1.1fr .9fr}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+
+    h2{font-family:"Playfair Display", Georgia, serif;font-size:clamp(26px,3.2vw,38px);margin:0 0 16px}
+    .lead{color:var(--muted);font-size:18px}
+
+    .card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+
+    .bullets{display:grid;gap:14px;margin:18px 0 0}
+    .bullet{display:flex;gap:10px;align-items:flex-start}
+    .bullet .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);margin-top:8px;flex:0 0 auto}
+
+    /* Proceso */
+    .steps{display:grid;gap:18px}
+    .step{background:var(--paper);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .step b{display:block;margin-bottom:6px}
+
+    /* CTA */
+    .cta{background:linear-gradient(135deg, #efe7e0, #f7f3ef);border:1px solid rgba(0,0,0,.06)}
+
+    /* Contacto */
+    form{display:grid;gap:12px}
+    input, textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;font:inherit}
+    input:focus,textarea:focus{outline:2px solid var(--ring);border-color:var(--brand)}
+    textarea{min-height:140px;resize:vertical}
+
+    footer{padding:40px 0;color:var(--muted)}
+    .footgrid{display:grid;gap:16px;grid-template-columns:1fr auto}
+    @media (max-width: 720px){.footgrid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <a href="#top" aria-label="Bairu Weddings" style="text-decoration:none;color:var(--ink)"><strong>Bairu Weddings</strong></a>
+      </div>
+      <nav style="display:flex;gap:18px">
+        <a href="#acerca">Acerca de</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn ghost" href="#contacto">Solicita información</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top" aria-label="Portada">
+    <div class="media" aria-hidden="true">
+      <!-- Sustituye hero.jpg por tu foto principal -->
+      <img src="images/hero.jpg" alt="" />
+      <div class="scrim"></div>
+    </div>
+    <div class="container inner">
+      <h1>Diseño profesional <br/>de webs de boda personalizadas</h1>
+      <p>Sorprende a tus invitados con una web única para vuestro gran día. Nos encargamos de todo: diseño, textos, fotos y estilo adaptado a vosotros.</p>
+      <a class="btn" href="#contacto">Solicita más información</a>
+    </div>
+  </section>
+
+  <!-- Acerca de nosotros -->
+  <section id="acerca">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Acerca de nosotros</h2>
+        <p class="lead">Diseñamos la web de tu boda, totalmente personalizada para ti.</p>
+        <p>Creamos páginas web para bodas únicas y a medida. Cada web se diseña pensando en la pareja, en su historia y en la experiencia de sus invitados.</p>
+        <div class="card" style="background:#fff5f1;border:1px solid #f5e6df">
+          <strong style="display:block;font-size:22px;margin-bottom:6px">Tu web por 125€ <small style="font-weight:500;color:var(--muted)">(IVA incluido)</small></strong>
+          <div class="bullets">
+            <div class="bullet"><div class="dot"></div><div><strong>Diseño personalizado.</strong> Cada web refleja vuestra esencia.</div></div>
+            <div class="bullet"><div class="dot"></div><div><strong>Fácil para los invitados.</strong> Acceso sencillo desde cualquier dispositivo.</div></div>
+            <div class="bullet"><div class="dot"></div><div><strong>Privacidad.</strong> Opción de web con acceso restringido mediante contraseña.</div></div>
+            <div class="bullet"><div class="dot"></div><div><strong>Textos cuidados.</strong> No solo diseño, también creamos la narrativa de vuestra historia.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid" style="gap:18px">
+        <img src="images/about-1.jpg" alt="Detalle boda" />
+        <img src="images/about-2.jpg" alt="Pareja celebrando" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id="proceso">
+    <div class="container">
+      <h2>Así será el proceso de crear tu web de boda</h2>
+      <div class="steps">
+        <div class="step"><b>1) Contacto</b> Nos contáis qué necesitáis y cómo imagináis vuestra web.</div>
+        <div class="step"><b>2) Diseño inicial</b> Os presentamos una propuesta visual adaptada a vuestro estilo.</div>
+        <div class="step"><b>3) Revisión y entrega</b> Ajustamos detalles, fotos y textos hasta que quede perfecta y os mandamos el enlace final.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container" style="text-align:center;padding:48px 18px">
+      <h2>¿Quieres una web de boda única?</h2>
+      <p class="lead">Te ayudamos a contar vuestra historia y a sorprender a todos vuestros invitados.</p>
+      <a class="btn" href="#contacto">Solicita más información</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container grid grid-2">
+      <div>
+        <h2>Contacto</h2>
+        <p class="lead">Cuéntanos tu idea y te respondemos muy pronto.</p>
+        <form action="mailto:contacto@bairu.es" method="post" enctype="text/plain">
+          <input type="text" name="Nombre" placeholder="Nombre" required>
+          <input type="text" name="Apellidos" placeholder="Apellidos">
+          <input type="email" name="Email" placeholder="Email" required>
+          <textarea name="Mensaje" placeholder="Mensaje" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+        <p style="font-size:14px;color:var(--muted);margin-top:8px">Al enviar aceptas nuestra <a href="#privacidad">Política de Privacidad</a>.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Datos de contacto</h3>
+        <p><b>Email:</b> <a href="mailto:contacto@bairu.es">contacto@bairu.es</a><br>
+           <b>Instagram:</b> <a href="https://instagram.com/" target="_blank" rel="noopener">@bairu.weddings</a></p>
+        <img src="images/contact.jpg" alt="Boda – detalle" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footgrid">
+      <div>© <span id="y"></span> Creado por Bairu Weddings</div>
+      <div><a id="privacidad" href="#">Política de Privacidad</a> · <a href="#top">Volver arriba</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Año actual en footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
